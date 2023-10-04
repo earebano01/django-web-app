@@ -1,0 +1,45 @@
+{% extends 'products/base.html' %}
+{% block content %}
+            <html>
+            <head>
+                <title>Products</title> 
+                <style>
+                    
+                </style>
+            </head>
+            <body>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>PRODUCT NAME</th>
+                            <th>DESCRIPTION</th>
+                            <th>PRICE</th>
+                            <th>STOCK</th>
+                            <th>DATE</th>
+                            <th>TIME</th>
+                            <th>STATUS</th>
+                            <th>LAST ORDER</th>
+                            <th>SUPPLIER WEBSITE</th>
+                            <th>SUPPLIER CONTACT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for product in product_info %}
+                        <tr>
+                            <td>{{ product.title }}</td>
+                            <td>{{ product.description }}</td>
+                            <td>{{ product.price }}</td>
+                            <td>{{ product.stock }}</td>
+                            <td>{{ product.date }}</td>
+                            <td>{{ product.time }}</td>
+                            <td>{{ product.status }}</td>
+                            <td>{{ product.lastorder }}</td>
+                            <td>{{ product.s_website }}</td>
+                            <td>{{ product.s_contact }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </body>
+            </html>
+{% endblock %}
